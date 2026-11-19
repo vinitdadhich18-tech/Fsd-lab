@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce function</title>
+</head>
+<body>
+    <script>
+        const num = [11, 22, 24, 26, 27, 33];
+        const even = num.filter((i) => (i % 2 == 0));
+        const square = even.map((i) => (i * i));
+        const sum = square.reduce((i,s) => (i + s));
+        console.log("num = ", num);
+        console.log("even = ", even);
+        console.log("square = ", square);
+        console.log("sum = ", sum);
+    </script>
+</body>
+</html>
