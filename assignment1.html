@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: bisque;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        .shopping-cart{
+            height: 500px;
+            width: 500px;
+            border: 2px solid black;
+            padding: 50px;
+            box-shadow: 0 0 20px brown;
+        }
+        h1{
+            text-align: center;
+        }
+        button{
+            width: 100px;
+            background-color: brown;
+            color: black;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="shopping-cart">
+            <h1>Online Shop</h1>
+            <div class="items">
+                <p>Rice : 500</p>
+                <p>Tea : 500</p>
+                <p>Coffee : 500</p>
+                <p>Sugar : 500</p>
+                <p>Salt : 500</p>
+            </div>
+            <button onclick="product()">Add to cart</button>
+            <div class="cart">
+                <h1>Your Cart</h1>
+                <h2>Total Amount : </h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        const items = {
+            Rice : 500,
+            Tea : 700,
+            Coffee : 800,
+            Sugar : 1000,
+            Salt : 300
+        }
+
+        let total = 0;
+        function product(){
+            let a = prompt("Enter Product");
+            let b = prompt("Enter Quantity");
+            total += Number(items[a] * b);
+            console.log(total);
+        }
+        
+    </script>
+</body>
+</html>
